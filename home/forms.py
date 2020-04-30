@@ -1,4 +1,11 @@
 from django import forms
 from .models import Reward
 
-#  form是在处理上传数据的中转平台
+
+class RewardModeLForm(forms.ModelForm):
+
+    class Meta:
+        model = Reward
+        fields = [
+            'text'
+        ]
